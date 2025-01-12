@@ -1,4 +1,19 @@
 
+#' Mixed Weibull distribution
+#'
+#' @param x Vector of quantiles
+#' @param y Vector of quantiles
+#' @param para.x Numeric vector containing the parameters of the distribution
+#' @param para.y Numeric vector containing the parameters of the distribution
+#' @param plot Logical indicating if the function shall be added to a plot
+#' @param ...
+#'
+#' @return Vector of probabilities
+#' @export
+#'
+#' @examples
+#' cdfwei_Mixed(x=AM, y=AM, para.x = pelwei(samlmu(AMs)), para.y = pelwei(samlmu(AMw)), plot=TRUE)
+
 cdfwei_Mixed <- function (x, y, para.x, para.y, plot=FALSE, ...) {
   if (length(para.x) != 3)
     stop("parameter vector has wrong length")
