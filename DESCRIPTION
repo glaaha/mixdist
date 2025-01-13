@@ -18,3 +18,5 @@ Imports:
 Depends: 
     R (>= 3.5)
 LazyData: true
+URL: https://github.com/glaaha/mixdist
+BugReports: https://github.com/glaaha/mixdist/issues
