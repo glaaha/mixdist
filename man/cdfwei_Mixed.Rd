@@ -7,17 +7,17 @@
 cdfwei_Mixed(x=AM, y=AM, para.x = pelwei(samlmu(AMs)), para.y = pelwei(samlmu(AMw)), plot=TRUE)
 }
 \arguments{
-\item{x}{Vector of quantiles}
+\item{x}{Vector of quantiles. Default is \code{AM}.}
 
-\item{y}{Vector of quantiles}
+\item{y}{Vector of quantiles. Default is \code{AM}.}
 
-\item{para.x}{Numeric vector containing the parameters of the distribution}
+\item{para.x}{Numeric vector containing the parameters of the distribution.}
 
-\item{para.y}{Numeric vector containing the parameters of the distribution}
+\item{para.y}{Numeric vector containing the parameters of the distribution.}
 
-\item{plot}{Logical indicating if the function shall be added to a plot}
+\item{plot}{Logical indicating if the function shall be added to a plot. Default is \code{FALSE}.}
 
-\item{...}{Other parameters}
+\item{...}{Additional arguments.}
 }
 \value{
 Vector of probabilities

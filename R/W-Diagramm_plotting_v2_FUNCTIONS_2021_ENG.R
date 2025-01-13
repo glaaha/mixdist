@@ -13,7 +13,7 @@ return.scale <- function(x=AM, ...)
 	lines(pts)
 	}
 	text(x=RV,y=rep(5.0,5)*fak, labels=T, pos=3, cex=1)
-	text(x=mean(min(RV),max(RV)), y=20*fak, labels="Jährlichkeit T (a)", pos=4, cex=1)
+	text(x=mean(min(RV),max(RV)), y=20*fak, labels="J\U00E4hrlichkeit T (a)", pos=4, cex=1)
 
 }
 return.scale.ENG <- function(x=AM, ...)
@@ -29,7 +29,7 @@ return.scale.ENG <- function(x=AM, ...)
   }
   text(x=RV,y=rep(5.0,5)*fak, labels=T, pos=3, cex=1)
   text(x=mean(min(RV),max(RV)), y=20*fak, labels="Return period T (a)", pos=4, cex=1)
-  
+
 }
 return.scale.ENG.1 <- function(x=AM, ...)
 {
@@ -44,7 +44,7 @@ return.scale.ENG.1 <- function(x=AM, ...)
   }
   text(x=RV,y=rep(5.0,5)*fak, labels=T, pos=3, cex=0.8)
   text(x=mean(min(RV),max(RV)), y=20*fak, labels="Return period T (a)", pos=4, cex=1)
-  
+
 }
 return.scale.ENG.ZOOM <- function(x=AM, ...)
 {
@@ -113,7 +113,7 @@ freq.axis.ZOOM <- function(x=AM, grid=FALSE, ...)
   f2 <- exp(-exp(-RV2)); f2<- round(f2,3); f2
   axis(side=3, at = RV2[1], labels = f2[1])
   axis(side=3, at = RV2[-1], labels = round(f2[-1],3))
-  
+
   mtext("P(x)", side=3, line=3, outer=FALSE, at = mean(par("usr")[1:2]), cex=1, font=1)
   # mit Grid
   if (grid==TRUE) {
@@ -126,7 +126,7 @@ freq.axis.ZOOM <- function(x=AM, grid=FALSE, ...)
 #######################################################################
 # Fct: Empir. Vt. mit Weibull plotting positions zeichnen
 # Dazu muss man be evplot(...type="n") setzen, um empty plot zu zeichnen
-evpointsGL <- function (y, ...) 
+evpointsGL <- function (y, ...)
 {
     yval <- sort(y[!is.na(y)])
     n <- length(yval)

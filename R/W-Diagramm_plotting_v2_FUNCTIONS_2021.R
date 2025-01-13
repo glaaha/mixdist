@@ -13,7 +13,7 @@ return.scale <- function(x=AM, ...)
 	lines(pts)
 	}
 	text(x=RV,y=rep(5.0,5)*fak, labels=T, pos=3, cex=1)
-	text(x=mean(min(RV),max(RV)), y=20*fak, labels="Jährlichkeit T (a)", pos=4, cex=1)
+	text(x=mean(min(RV),max(RV)), y=20*fak, labels="J\U00E4hrlichkeit T (a)", pos=4, cex=1)
 
 }
 
@@ -36,7 +36,7 @@ freq.axis <- function(x=AM, ...)
 #######################################################################
 # Fct: Empir. Vt. mit Weibull plotting positions zeichnen
 # Dazu muss man be evplot(...type="n") setzen, um empty plot zu zeichnen
-evpointsGL <- function (y, ...) 
+evpointsGL <- function (y, ...)
 {
     yval <- sort(y[!is.na(y)])
     n <- length(yval)
