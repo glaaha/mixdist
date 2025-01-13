@@ -34,5 +34,11 @@ usethis::use_import_from("lmom", "pelwei")
 # Declare global variables used in the examples (or as default values of Funs):
 utils::globalVariables(c("AM", "x1"))
 
+
+# Making Binary Data Available
+use_data(xa, xb, xc, xd)
+
+
 ###
 #Now to GitHub:
+use_github()

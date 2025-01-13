@@ -1,4 +1,4 @@
 #' @name globalVariables
 #' @keywords internal
-utils::globalVariables(c("AM", "x1", "AM_list"))
+utils::globalVariables(c("x1", "AM", "AM_list"))
 NULL

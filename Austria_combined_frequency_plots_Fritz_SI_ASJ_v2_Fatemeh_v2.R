@@ -1,6 +1,6 @@
 #library(lfstat)
 # require(copula)
-# require(EnvStats)
+# require(EnvStats) ## Nicht als dependent laden...
 # require(FAdist)
 # require(xtable)
 
@@ -151,6 +151,7 @@ par(oma=c(0.5,0.5,2,0.01), mar=c(4,4,0.1,0.1))
 #b) -> a)
 par(mgp=c(2.2,1,0))
 # Prepare AM series
+#x1 <- xa
 AM_list <- seasAM_FUN(xa)
 AM <- AM_list$AM
 # empty plot
@@ -158,21 +159,21 @@ evplot(AM, xlab = "-ln(-ln(P(x)))", ylab = "Annual low flow (m³/s)", rp.axis = 
 return.scale.ENG.ZOOM.1()
 # draw the plot
 ev_plot_combined(AM_list)     # Mixed distribution approach
-# ev_plot_combined_COP(AM_list) # Mixed copula estimator
+# ev_plot_combined_COP(xa) # Mixed copula estimator
 mtext("a)", 3, adj=0, line = 0.5)
 
 # Complete evplot for Panel b
 #d)
 par(mar=c(4,3,0.1,1.1))
 # Prepare AM series
-my_AM <- seasAM_FUN(xd)
+AM_list <- seasAM_FUN(xd)
 AM <- AM_list$AM
 # empty plot
 evplot(AM, xlab = "-ln(-ln(P(x)))", ylab = "", rp.axis = FALSE, type="n")
 return.scale.ENG.1()
 # draw the plot
 ev_plot_combined(AM_list)     # Mixed distribution approach
-# ev_plot_combined_COP(AM_list) # Mixed copula estimator
+# ev_plot_combined_COP(xd) # Mixed copula estimator
 mtext("b)", 3, adj=0, line = 0.5)
 
 # And finally close the plot (when plotting a pdf)
