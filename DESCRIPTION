@@ -1,9 +1,9 @@
 Package: mixdist
-Title: What the Package Does (One Line, Title Case)
+Title: Mixed Distribution Estimators for Low Flows (Mixed & Mixed Copula)
 Version: 0.0.0.9000
 Authors@R: 
     person("Gregor", "Laaha", , "gregor.laaha@boku.ac.at", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Description: All functions for low-flow frequency analysis based on the two papers Laaha (2023a,b) in HESS .
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

@@ -4,9 +4,9 @@
 \name{mixdist-package}
 \alias{mixdist}
 \alias{mixdist-package}
-\title{mixdist: What the Package Does (One Line, Title Case)}
+\title{mixdist: Mixed Distribution Estimators for Low Flows (Mixed & Mixed Copula)}
 \description{
-What the package does (one paragraph).
+All functions for low-flow frequency analysis based on the two papers Laaha (2023a,b) in HESS .
 }
 \author{
 \strong{Maintainer}: Gregor Laaha \email{gregor.laaha@boku.ac.at}
