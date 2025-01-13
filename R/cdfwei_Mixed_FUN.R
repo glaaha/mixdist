@@ -6,12 +6,13 @@
 #' @param para.x Numeric vector containing the parameters of the distribution
 #' @param para.y Numeric vector containing the parameters of the distribution
 #' @param plot Logical indicating if the function shall be added to a plot
-#' @param ...
+#' @param ... Other parameters
 #'
 #' @return Vector of probabilities
+#'
 #' @export
 #'
-#' @examples
+#' @usage
 #' cdfwei_Mixed(x=AM, y=AM, para.x = pelwei(samlmu(AMs)), para.y = pelwei(samlmu(AMw)), plot=TRUE)
 
 cdfwei_Mixed <- function (x, y, para.x, para.y, plot=FALSE, ...) {

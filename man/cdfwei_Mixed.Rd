@@ -4,7 +4,7 @@
 \alias{cdfwei_Mixed}
 \title{Mixed Weibull distribution}
 \usage{
-cdfwei_Mixed(x, y, para.x, para.y, plot = FALSE, ...)
+cdfwei_Mixed(x=AM, y=AM, para.x = pelwei(samlmu(AMs)), para.y = pelwei(samlmu(AMw)), plot=TRUE)
 }
 \arguments{
 \item{x}{Vector of quantiles}
@@ -17,14 +17,11 @@ cdfwei_Mixed(x, y, para.x, para.y, plot = FALSE, ...)
 
 \item{plot}{Logical indicating if the function shall be added to a plot}
 
-\item{...}{}
+\item{...}{Other parameters}
 }
 \value{
 Vector of probabilities
 }
 \description{
 Mixed Weibull distribution
-}
-\examples{
-cdfwei_Mixed(x=AM, y=AM, para.x = pelwei(samlmu(AMs)), para.y = pelwei(samlmu(AMw)), plot=TRUE)
 }
