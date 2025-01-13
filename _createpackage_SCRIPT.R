@@ -9,11 +9,11 @@ load_all()
 
 check()
 
-# 1.10 Edit DESCRIPTION - ToDo
+# 1.10 Edit DESCRIPTION - ToDo ongoing
 
 use_mit_license()
 
-# 1.12 document() - ToDo
+# 1.12 document() - ToDo ongoing
 document()
 
 # 1.16 use_package()
