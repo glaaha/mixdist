@@ -1,6 +1,8 @@
 
 ########################################################################
 ## Fct: Return period scale plotten (mit scaling Faktor fak)
+
+#' @export
 return.scale <- function(x=AM, ...)
 {
 	T<-c(2,5,10,20,100); f<-1/T; f
@@ -16,6 +18,8 @@ return.scale <- function(x=AM, ...)
 	text(x=mean(min(RV),max(RV)), y=20*fak, labels="J\U00E4hrlichkeit T (a)", pos=4, cex=1)
 
 }
+
+#' @export
 return.scale.ENG <- function(x=AM, ...)
 {
   T<-c(2,5,10,20,100); f<-1/T; f
@@ -31,6 +35,8 @@ return.scale.ENG <- function(x=AM, ...)
   text(x=mean(min(RV),max(RV)), y=20*fak, labels="Return period T (a)", pos=4, cex=1)
 
 }
+
+#' @export
 return.scale.ENG.1 <- function(x=AM, ...)
 {
   T<-c(2,5,10,20,100); f<-1/T; f
@@ -46,6 +52,8 @@ return.scale.ENG.1 <- function(x=AM, ...)
   text(x=mean(min(RV),max(RV)), y=20*fak, labels="Return period T (a)", pos=4, cex=1)
 
 }
+
+#' @export
 return.scale.ENG.ZOOM <- function(x=AM, ...)
 {
   T<-c(2,5,10,20,100); f<-1/T; f
@@ -69,6 +77,8 @@ return.scale.ENG.ZOOM <- function(x=AM, ...)
   text(x=RV,y=rep(5.0,5)*fak+ymin, labels=T, pos=3, cex=1)
   text(x=mean(RV), y=22*fak+ymin, labels="Return period T (a)",adj=0.5,  cex=1) # pos=2,
 }
+
+#' @export
 return.scale.ENG.ZOOM.1 <- function(x=AM, ...)
 {
   T<-c(2,5,10,20,100); f<-1/T; f
@@ -94,6 +104,7 @@ return.scale.ENG.ZOOM.1 <- function(x=AM, ...)
 }
 #######################################################################
 # Fct: Frequency axis plotten
+#' @export
 freq.axis <- function(x=AM, ...)
 {
 	RV2 <- seq(-2, 5); RV2
@@ -107,6 +118,8 @@ freq.axis <- function(x=AM, ...)
 	ti <- axTicks(side=2)
 	for(ty in seq(min(ti), max(ti), by=(ti[2]-ti[1])/2)) abline(h=ty, lty="dotted")
 }
+
+#' @export
 freq.axis.ZOOM <- function(x=AM, grid=FALSE, ...)
 {
   RV2 <- seq(-2, exp(-exp(0)), by=0.5); RV2
@@ -126,6 +139,8 @@ freq.axis.ZOOM <- function(x=AM, grid=FALSE, ...)
 #######################################################################
 # Fct: Empir. Vt. mit Weibull plotting positions zeichnen
 # Dazu muss man be evplot(...type="n") setzen, um empty plot zu zeichnen
+
+#' @export
 evpointsGL <- function (y, ...)
 {
     yval <- sort(y[!is.na(y)])

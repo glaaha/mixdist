@@ -1,4 +1,4 @@
-
+#' @export
 ########################################################################
 ## Fct: Return period scale plotten (mit scaling Faktor fak)
 return.scale <- function(x=AM, ...)

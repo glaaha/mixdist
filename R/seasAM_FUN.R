@@ -1,3 +1,9 @@
+#' Title
+#'
+#' @param x1 Vector of daily discharge series
+#'
+#' @return List containing annual series of AM, AMs, AMw
+#' @export
 seasAM_FUN <- function(x1){
   ## Separate into sum/win season
   x1s <- x1[ x1$month >= 4 & x1$month <= 10 , ]

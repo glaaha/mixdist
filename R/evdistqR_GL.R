@@ -1,3 +1,4 @@
+#' @export
 evdistqR <- function (qfunc, para, npoints = 101, ...)
 {
 #####
