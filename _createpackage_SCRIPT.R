@@ -41,4 +41,4 @@ use_data(xa, xb, xc, xd)
 
 ###
 #Now to GitHub:
-use_github()
+use_github(private=TRUE)
