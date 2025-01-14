@@ -42,3 +42,7 @@ use_data(xa, xb, xc, xd)
 ###
 #Now to GitHub:
 use_github(private=TRUE)
+
+
+# Finally install from github:
+devtools::install_github("glaaha/mixdist")

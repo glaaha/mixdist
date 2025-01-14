@@ -1,0 +1,116 @@
+---
+title: "Plotting example"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{plotting_example}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(mixdist)
+library(lfstat)
+library(FAdist)
+```
+
+# Plotting example: Combined plot (Fritz SI AJS)
+This shows how to produce combined frequency plots containing empirical and theoretical distributions
+
+
+## Set paths
+```{r}
+path1 <- "./inst/extdata/HzbBis2010/" # Austrian data
+path <- "./inst/extdata/Bayern_Daten_GL/" # Bavarian Data
+plot.path <- "./Plot/" # Plot directory
+```
+
+## Load data from Austrian and Bavarian daily discharge monitoring files
+
+The data import uses \package{lfstat} to read in daily discharges from a typical monitoring file. It returns an ´lfobj´, which is snipped to the reference period: low-flow years starting in April, for the 1950-2010 period.
+```{r eval=FALSE}
+# Austria (a,c,d)
+.pg <-205229 # Ebensee @ Langbathbach - Zone 4 (Flyschzone)
+.fi <- paste(path1, "QMittelTag", .pg, ".dat", sep="")
+readLines(.fi, n = 5)
+x0 <- lfstat::readlfdata(.fi, type="HZB",  hyearstart = 4, baseflow =FALSE)
+x2 <- x0[x0$year>=1950,]
+x1 <- x2[-(1:90),]
+xa <- x1
+```
+
+```{r eval=FALSE}
+#b) Bavaria
+.pg <- 18381500 # Weg / Isen  ## good!
+.path <- "./inst/extdata/Bayern_Daten_GL/"
+.fi <- paste(path, .pg, ".dat", sep="")
+readLines(.fi, n = 1)
+x0 <- readlfdata(.fi, type="LFU",  hyearstart = 4, baseflow =FALSE)
+x2 <- x0[x0$year>=1950,]
+x1 <- x2[-(1:90),]
+xb <- x1
+```
+
+The data objects ´xa´ and ´xb´ are available from the package anyway...
+
+## Creat plots
+
+```{r}
+width <- 9.5
+#x11(width = width, height = width/2)
+#or pdf device:
+#pdf(file = file.path(plot.path, "Figure_MixedDist.pdf", width = width, height = width/2)
+```
+
+```{r}
+# General plot Layout: 2 horizontal panels
+par(mfrow=c(1,2))
+par(oma=c(0.5,0.5,2,0.01), mar=c(4,4,0.1,0.1))
+```
+
+## Zoomed evplot for Panel a
+
+```{r}
+#b) -> a)
+par(mgp=c(2.2,1,0))
+# Prepare AM series
+AM_list <- seasAM_FUN(xa)
+AM <- AM_list$AM
+# empty plot
+evplot(AM, xlab = "-ln(-ln(P(x)))", ylab = "Annual low flow (m³/s)", rp.axis = FALSE, type="n", plim=c(0.001, 0.5), ylim=c(min(AM)-((median(AM)-min(AM))/2),median(AM)))
+return.scale.ENG.ZOOM.1()
+# draw the plot
+ev_plot_combined(AM_list) # Mixed distribution approach
+# or: 
+ev_plot_combined_COP(xa) # Mixed copula estimator
+mtext("a)", 3, adj=0, line = 0.5)
+```
+
+## Complete evplot for Panel b
+
+```{r}
+#d)
+par(mar=c(4,3,0.1,1.1))
+# Prepare AM series
+AM_list <- seasAM_FUN(xd)
+AM <- AM_list$AM
+# empty plot
+evplot(AM, xlab = "-ln(-ln(P(x)))", ylab = "", rp.axis = FALSE, type="n")
+return.scale.ENG.1()
+# draw the plot
+ev_plot_combined(AM_list)     # Mixed distribution approach
+# ev_plot_combined_COP(xd) # Mixed copula estimator
+mtext("b)", 3, adj=0, line = 0.5)
+```
+
+# And finally close the plot device (especially when plotting a pdf)
+```{r}
+dev.off()
+```
+
