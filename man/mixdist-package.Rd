@@ -8,6 +8,14 @@
 \description{
 All functions for low-flow frequency analysis based on the two papers Laaha (2023a,b) in HESS .
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/glaaha/mixdist}
+  \item Report bugs at \url{https://github.com/glaaha/mixdist/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Gregor Laaha \email{gregor.laaha@boku.ac.at}
 
