@@ -39,6 +39,9 @@ utils::globalVariables(c("AM", "x1"))
 use_data(xa, xb, xc, xd)
 
 
+# Making Vignettes
+use_vignette("plotting_example")
+
 ###
 #Now to GitHub:
 use_github(private=TRUE)
