@@ -20,8 +20,8 @@ library(lfstat)
 library(FAdist)
 ```
 
-# Plotting example: Combined plot (Fritz SI AJS)
-This shows how to produce combined frequency plots containing empirical and theoretical distributions
+# Plotting example: Combined plot
+This shows how to produce combined frequency plots containing empirical and theoretical distributions (as the one used for Fritz SI in AJS)
 
 
 ## Set paths
@@ -57,7 +57,7 @@ x1 <- x2[-(1:90),]
 xb <- x1
 ```
 
-The data objects ´xa´ and ´xb´ are available from the package anyway...
+The data objects ´xa´, ´xb´, ´xc´, ´xd´ are available from the package anyway...
 
 ## Creat plots
 
@@ -109,7 +109,7 @@ ev_plot_combined(AM_list)     # Mixed distribution approach
 mtext("b)", 3, adj=0, line = 0.5)
 ```
 
-# And finally close the plot device (especially when plotting a pdf)
+## And finally close the plot device (especially when plotting a pdf)
 ```{r}
 dev.off()
 ```

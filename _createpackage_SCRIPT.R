@@ -41,6 +41,8 @@ use_data(xa, xb, xc, xd)
 
 # Making Vignettes
 use_vignette("plotting_example")
+devtools::build_vignettes()
+#(and document...)
 
 ###
 #Now to GitHub:
