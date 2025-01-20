@@ -51,7 +51,7 @@ x.pred.mix <- cdfwei_Mixed(x=AM, y=AM, para.x = pelwei(samlmu(AMs)), para.y = pe
 x.pred.mixC <- cdfwei_MixedC(x=AM, y=AM, para.x = pelwei(samlmu(AMs)), para.y = pelwei(samlmu(AMw)), x1=x1, plot=FALSE)
 
 
-# /!\ NEU hier sample + predictions f?r sample werte zusammenstellen!
+# /!\ NEU hier sample + predictions für sample werte zusammenstellen!
 
 #sample <- cbind(obs=obs, pA=x.p, TA=1/x.p, pMix=x.pred.mix, TMix=1/x.pred.mix, "pMixC"=p.mix.c, "TMixC"=1/p.mix.c)
 #obs <- data.frame(cbind(hyear=AM0$hyear, x=AM, pobs=.pobs, pobs.mix=.pobs.mix$p.mix, pobs.mix=.pobs.mixC$p.mix.c))

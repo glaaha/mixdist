@@ -41,6 +41,7 @@ use_data(xa, xb, xc, xd)
 
 # Making Vignettes
 use_vignette("plotting_example")
+use_vignette("lfmix")
 devtools::build_vignettes()
 #(and document...)
 
