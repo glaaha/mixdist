@@ -230,7 +230,7 @@ pred.mixC <- data.frame(y_of_To=f.qmixC, p=.pmixC, T=1/.pmixC)
 print(pred.mixC)
 ```
 
-# Finally build output object `$To_events`
+### Finally build output object `$To_events`
 ```{r}
 To_events <- data.frame("To"=1/.p, "po"=.p, "Tmix"=1/.pmix , "pmix"=.pmix , "TmixC"=1/.pmixC , "pmixC"=.pmixC , "Ts"=1/.ps, "ps"=.ps, "Tw"=1/.pw, "pw"=.pw)
 print(To_events)
